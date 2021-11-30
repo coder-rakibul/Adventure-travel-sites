@@ -1,6 +1,6 @@
 <h1 style='font-size: 40px' align="center">Releasing the beta version as of now will add more benefits if needed.</h1>
 
-<img src="https://github.com/coder-rakibul/Advancer-travel-website/blob/master/Images/ShowOff/desk.png?raw=true" alt="Advancer Travel">
+<img src="https://github.com/coder-rakibul/Adventure-travel-sites/blob/master/Images/ShowOff/desk.png?raw=true" alt="Advancer Travel">
 
 ### Athor Name: Rakibul Islam.
 ### Project Name: Advancer Travel Web-Site. 
@@ -15,7 +15,10 @@
      
 <br/>
 
-## This Project Clone Link: https://github.com/coder-rakibul/Advancer-travel-website.git
+## This Project Clone Link: 
+  ```npm
+    https://github.com/coder-rakibul/Adventure-travel-sites.git
+  ```
 
 ## It will have all the facilities.
 
@@ -35,15 +38,15 @@
   JavaScript
 ```
 
-## [Live Damo](https://coder-rakibul.github.io/Advancer-travel-website/)
+## [Live Damo](https://coder-rakibul.github.io/Adventure-travel-sites/)
 <br/><br/>
 
 <h1 align="center">computer view</h1>
-<img src="https://github.com/coder-rakibul/Advancer-travel-website/blob/master/Images/ShowOff/desk.png?raw=true" alt="Advancer Travel">
+<img src="https://github.com/coder-rakibul/Adventure-travel-sites/blob/master/Images/ShowOff/desk.png?raw=true" alt="Advancer Travel">
 <h1 align="center">Tab view</h1>
-<img src="https://github.com/coder-rakibul/Advancer-travel-website/blob/master/Images/ShowOff/tab.png?raw=true" alt="Advancer Travel">
-<h1 align="center">Bobile view</h1>
-<img src="https://github.com/coder-rakibul/Advancer-travel-website/blob/master/Images/ShowOff/mobile.png?raw=true" alt="Advancer Travel">
+<img src="https://github.com/coder-rakibul/Adventure-travel-sites/blob/master/Images/ShowOff/tab.png?raw=true" alt="Advancer Travel">
+<h1 align="center">Mobile view</h1>
+<img src="https://github.com/coder-rakibul/Adventure-travel-sites/blob/master/Images/ShowOff/mobile.png?raw=true" alt="Advancer Travel">
 
 <h1 style='font-size: 40px' align="center">Support me</h1>
 
