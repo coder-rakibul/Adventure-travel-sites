@@ -1,0 +1,66 @@
+// Mixin
+
+// Grig
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+// Images
+@mixin home-bg($img) {
+    background: $img;
+    background-repeat: no-repeat;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+// Fixid Top
+@mixin top-fixid($fixid) {
+    position: $fixid;
+    top: 0;
+    left: 0;
+}
+
+// Bacic Botton
+@mixin button {
+    margin-top: 1rem;
+    display: inline-block;
+    border: $border;
+    color: $black;
+    cursor: pointer;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+
+}
+
+// .btn {
+
+//     margin-top: 1rem;
+//     display: inline-block;
+//     border: $border;
+//     color: $black;
+//     cursor: pointer;
+//     background: none;
+//     font-size: 1.7rem;
+//     padding: 1rem 3rem;
+
+//     font: {
+//         weight: bolder;
+//     }
+
+//     &:hover {
+//         background: $black;
+//         color: $white;
+
+//         font: {
+//             weight: normal;
+//         }
+//     }
+// }

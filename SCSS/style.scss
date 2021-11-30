@@ -1,0 +1,771 @@
+@import "reset.scss";
+@import "variable.scss";
+@import "mixin.scss";
+@import "color.scss";
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    z-index: $zindex;
+    display: flex;
+    align-items: center;
+
+    &.actives {
+        background: $white;
+        box-shadow: $box-shadow;
+    }
+
+    .logo {
+        margin-right: auto;
+        font-size: 2.5rem;
+        color: $black;
+
+        font: {
+            weight: 600;
+        }
+
+        i {
+            color: $green;
+            margin-right: 5px;
+        }
+    }
+
+    .nav-list {
+        .nav-crose {
+            display: none;
+            position: absolute;
+
+            a {
+                color: $black;
+            }
+        }
+
+        display: flex;
+        list-style: none;
+
+        a {
+            margin-left: 2rem;
+            font-size: 1.7rem;
+            color: $black;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
+    .icon {
+        a {
+            color: $black;
+
+            i {
+                font-size: 2.5rem;
+                margin-left: 2rem;
+                cursor: pointer;
+
+            }
+
+            &:hover {
+                color: $green;
+            }
+        }
+
+        #manu-bar {
+            display: none;
+        }
+
+        .min-nav {
+            @include top-fixid(fixed);
+            background: $white;
+            z-index: $zindex;
+            width: 35rem;
+            height: $full-hight;
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, .8);
+            display: inline-block;
+        }
+    }
+}
+
+.nav-crose {
+    display: none;
+    position: absolute;
+
+    a {
+        &:hover {
+            color: $green;
+        }
+
+        &:active {
+            color: $green;
+        }
+    }
+}
+
+// Navication bar code end
+
+.search-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $full-width;
+    height: $full-hight;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: $zindex;
+    transform: translateY(-110%);
+
+    &.active {
+        transform: translateY(0%);
+    }
+
+    .form-section {
+        width: 70rem;
+        margin: 0 2rem;
+        padding-bottom: 2rem;
+        border-bottom: .2rem solid $white;
+        display: flex;
+        align-items: center;
+
+        input {
+            width: $full-width;
+            font-size: 2rem;
+            color: $white;
+            font-family: $body-f;
+
+            text: {
+                transform: none;
+            }
+
+            background: none;
+            padding-right: 2rem;
+
+            &::placeholder {
+                color: #aaa;
+            }
+        }
+
+        label {
+            font-size: 3rem;
+            cursor: pointer;
+            color: $white;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
+    #close-section {
+        position: absolute;
+        top: 2rem;
+        right: 2.5rem;
+        font-size: 5rem;
+        cursor: pointer;
+        color: $white;
+
+        i {
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+}
+
+// Home selide code start
+
+.home {
+    padding: 0;
+
+    .home-selider {
+        .wrapper {
+            .selide {
+                .box {
+                    height: $full-hight;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 2rem 9%;
+
+                    &.home-bg-two {
+                        justify-content: flex-start;
+                    }
+
+                    .content {
+                        width: 50rem;
+
+                        span {
+                            font-size: 4rem;
+                            color: $black;
+                        }
+
+                        h3 {
+                            font-size: 6rem;
+                            color: $green;
+                            text-transform: uppercase;
+                        }
+
+                        p {
+                            line-height: 2;
+                            color: $black;
+                            padding: 1rem 0;
+                            font-size: 1.5rem;
+                        }
+
+                        // Btn
+                    }
+                }
+
+                .home-bg-one {
+                    @include home-bg(url(../Images/Selider-Img/home-bg-1.jpg))
+                }
+
+                .home-bg-two {
+                    @include home-bg(url(../Images/Selider-Img/home-bg-2.jpg))
+                }
+
+                .home-bg-three {
+                    @include home-bg(url(../Images/Selider-Img/home-bg-3.jpg))
+                }
+            }
+        }
+    }
+}
+
+/*Selider Code Start*/
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: $black;
+    font-size: 2rem;
+}
+
+/*Selider Code End*/
+
+// Category Section Start
+
+.category {
+
+    .box-container {
+        @include grid(29rem);
+
+        .box {
+            text-align: center;
+            padding: 1rem;
+
+            img {
+                height: 20rem;
+                width: 20rem;
+                border-radius: 50%;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                color: $green;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $black;
+                padding: 1rem 0;
+                line-height: 2;
+            }
+
+            .btn {
+                @include button;
+            }
+
+        }
+    }
+}
+
+// Category Section End
+// About Section Start
+
+.about {
+    background: $light-bg;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .images {
+        flex: 1 1 42rem;
+        padding-right: 5rem;
+        padding-bottom: 5rem;
+
+        img {
+            width: 100%;
+            box-shadow: 4rem 4rem 0 rgba(0, 0, 0, .1);
+        }
+    }
+
+    .content {
+        flex: 1 1 42rem;
+
+        h3 {
+            font-size: 3rem;
+            color: $green;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $black;
+            padding: 1rem 0;
+            line-height: 2;
+        }
+    }
+}
+
+// About Section End
+// Prodact Section Start
+
+.shop {
+
+    .selid {
+        width: 35rem;
+        border: $border;
+
+        &:hover .images .icon {
+            transform: translateY(0);
+        }
+
+        .images {
+            position: relative;
+            overflow: hidden;
+            height: 30rem;
+            width: $full-width;
+
+            img {
+                height: 100%;
+                width: $full-width;
+                object-fit: cover;
+            }
+
+            .icon {
+                width: $full-width;
+                position: absolute;
+                bottom: 2rem;
+                left: 0;
+                text-align: center;
+                z-index: 10;
+                transform: translateY(7rem);
+
+                a i {
+                    height: 4.5rem;
+                    width: 4.5rem;
+                    line-height: 4.5rem;
+                    font-size: 1.7rem;
+                    background: $black;
+                    color: $white;
+                    margin: 0 .2rem;
+
+                    &:hover {
+                        background: $green !important;
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding: 1rem 0;
+            text-align: center;
+
+            h3 {
+                font-size: 2rem;
+                color: $black;
+            }
+
+            .price {
+                padding: 1rem 0;
+                padding-top: .5rem;
+                font-size: 2.5rem;
+                color: $green;
+            }
+
+            .star i {
+                font-size: 1.7rem;
+                color: $black;
+            }
+        }
+    }
+}
+
+// Prodact shop section end
+// pakage section start
+.packages {
+    background: $light-bg;
+
+    .box-container {
+        @include grid(32rem);
+
+        .box {
+            text-align: center;
+            background: $white;
+            border: $border;
+            box-shadow: $box-shadow;
+            border-radius: .5rem;
+
+            &:hover a {
+                color: $white;
+            }
+
+            &:hover {
+                background: $black;
+
+                .content {
+                    color: $white;
+
+                    h3 {
+                        color: $white;
+                    }
+                }
+
+
+                .btn {
+                    border-color: $white;
+
+                    &:hover {
+                        background: $white;
+                        color: $black;
+                    }
+                }
+            }
+
+            .images {
+                height: 25rem;
+                overflow: hidden;
+                padding: 2rem;
+                padding-bottom: 0;
+                border-radius: .5rem;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: .5rem;
+                }
+            }
+
+            .content {
+                padding: 2rem;
+
+                h3 {
+                    font-size: 2rem;
+                    color: $black;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    color: $black;
+                    padding: 1rem 0;
+                    line-height: 2;
+                }
+
+                .price {
+                    font-size: 2rem;
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+// pakage section end
+
+// Offer tore sectio start
+.service {
+    background: $light-bg;
+
+    .box-contenar {
+        @include grid(31rem);
+
+        .box {
+            text-align: center;
+            padding: 2rem;
+            border: $border;
+            border-radius: .5rem;
+            background: $white;
+
+
+            &:hover {
+                background: $black;
+
+                img {
+                    filter: invert(1);
+                }
+
+                h3 {
+                    color: $white;
+                }
+
+                p {
+                    color: $white;
+                }
+
+                .btn {
+                    border-color: $white;
+                    color: $white;
+
+                    &:hover {
+                        color: $black;
+                        background: $white;
+                    }
+                }
+            }
+
+            img {
+                height: 10rem;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                color: $green;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: $black;
+                padding: 1rem 0;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+// Offer tore sectio end
+
+// Revew section
+
+.revews {
+    .slide {
+        .text {
+            padding: 2rem;
+            font-size: 1.5rem;
+            font-style: italic;
+            background: $light-bg;
+            border-radius: .5rem;
+            color: $black;
+            font-weight: 300;
+            line-height: 2;
+            position: relative;
+            z-index: 0;
+            margin-bottom: 3rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -1.5rem;
+                left: .7rem;
+                height: 3rem;
+                width: 3rem;
+                background: $light-bg;
+                transform: rotate(45deg);
+            }
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                height: 7rem;
+                width: 7rem;
+                border-radius: 50%;
+            }
+
+            h3 {
+                font-size: 2rem;
+                color: $black;
+            }
+
+            span {
+                color: $green;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// Blogs Section
+.blogs {
+    .slide {
+        text-align: center;
+        padding: 2rem;
+
+        img {
+            height: 25rem;
+            width: $full-width;
+            object-fit: cover;
+        }
+
+        .icone {
+            background: $black;
+            border-radius: .5rem;
+            padding: 1rem;
+            position: relative;
+            top: -2rem;
+            display: inline-block;
+
+            a {
+                font-size: 1.4rem;
+                color: $white;
+                margin: 0 1rem;
+
+                &:hover {
+                    color: $green;
+                }
+
+                i {
+                    padding-right: .5rem;
+                    color: $green;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: $black;
+        }
+
+        p {
+            font-size: 1.4rem;
+            padding: 1rem 0;
+            line-height: 2;
+            color: $black;
+        }
+    }
+}
+
+// Sucribe Section
+
+.newsletter {
+    background: $light-bg;
+
+    .content {
+        max-width: 70rem;
+        margin: 1rem auto;
+        text-align: center;
+
+        p {
+            font-size: 1.5rem;
+            line-height: 2;
+            color: $black;
+        }
+
+        form {
+            margin-top: 2rem;
+            background: $white;
+            border-radius: 5rem;
+            border: $border;
+            padding: .7rem;
+            display: flex;
+
+            .email {
+                width: 100%;
+                background: none;
+                text-transform: none;
+                font-size: 1.6rem;
+                color: $black;
+                padding: 0 1.3rem;
+            }
+
+            .btn {
+                margin-top: 0;
+                border-radius: 5rem;
+                background: $black;
+                color: $white;
+
+                &:hover {
+                    background: none;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+// clients-logo Section Start
+.clients-logo {
+    .slide {
+        text-align: center;
+    }
+
+    img {
+        height: 12rem;
+    }
+}
+
+// clients-logo Section End
+
+// Footer Section Start Start
+
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../Images/Footer/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    .box-contenar {
+        @include grid(25rem);
+
+        .box {
+            h3 {
+                font-size: 2rem;
+                padding: 1.5rem 0;
+                color: $white;
+            }
+
+            a {
+                display: block;
+                font-size: 1.4rem;
+                color: $white;
+                padding: 1rem 0;
+
+                i {
+                    color: $green;
+                    padding-right: .5rem;
+                }
+
+                &:hover {
+                    color: $green !important;
+
+                    i {
+                        padding-right: 2rem;
+                    }
+                }
+            }
+
+            i {
+                color: $green;
+                padding-right: .5rem;
+            }
+
+
+        }
+    }
+
+    .creat {
+        text-align: center;
+        margin-top: 2.5rem;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        font-size: 2rem;
+        color: $white;
+
+        span {
+            color: $green;
+        }
+    }
+}
+
+// Footer Section Start End

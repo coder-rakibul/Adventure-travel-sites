@@ -1,0 +1,84 @@
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55% !important;
+    scroll-padding-top: 7rem;
+  }
+
+  .home .box {
+    padding: 2rem;
+    justify-content: center;
+    background-position: right !important;
+  }
+  .home .box.home-bg-two {
+    justify-content: center;
+    background-position: left !important;
+  }
+  .home .box .content {
+    text-align: center !important;
+  }
+  .home .box .content span {
+    font-size: 3rem;
+  }
+  .home .box .content h3 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav-crose {
+    display: inline-block !important;
+    top: 9px;
+    right: 20px;
+    font-size: 28px;
+  }
+
+  .header .icon #manu-bar {
+    display: inline-block !important;
+  }
+  .header .min-nav {
+    position: fixed;
+    top: 0;
+    left: 110%;
+    background: #ffffff9e;
+    z-index: 10000;
+    width: 50%;
+    height: 100%;
+  }
+  .header .min-nav .nav-list {
+    display: inline-block;
+    padding-top: 66px;
+    margin-left: 15%;
+  }
+  .header .min-nav.active {
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.1);
+    left: 0;
+  }
+  .header .min-nav ul li {
+    line-height: 2.5;
+  }
+  .header .min-nav ul li a {
+    margin: 1rem;
+    font-size: 20px;
+    font-size: 25px;
+  }
+
+  .swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none !important;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/*# sourceMappingURL=media-query.css.map */
